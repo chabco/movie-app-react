@@ -6,12 +6,14 @@ function Movie(props){
     const moviePath = `http://www.themoviedb.org/movie/${props.movie.id}`;
 
     return(
-        <div className="col s3 center">
+        <div className="col s6 center">
+            <div className="card pink lighten-2">
             <a href={moviePath}>
-                <img alt="movie" src={imagePath} />
+                <img alt={props.movie.title} src={imagePath} />
             </a>
-            <div>
+            <div className="card-panel">
                 {props.movie.title}
+            </div>
             </div>
         </div>
     )
